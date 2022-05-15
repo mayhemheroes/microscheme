@@ -1,0 +1,6 @@
+project: rnshah9/mayhem-microscheme
+target: microscheme
+
+cmds:
+  - cmd: /repo/microscheme @@
+    filepath: /test.ms

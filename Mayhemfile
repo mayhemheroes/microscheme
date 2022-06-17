@@ -1,5 +1,7 @@
 project: microscheme
 target: microscheme
+testsuite:
+  - file://examples
 
 cmds:
   - cmd: /repo/microscheme /test.ms

@@ -4,5 +4,4 @@ testsuite:
   - file://examples
 
 cmds:
-  - cmd: /repo/microscheme /test.ms
-    filepath: /test.ms
+  - cmd: /install/bin/microscheme @@

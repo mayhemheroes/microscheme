@@ -1,0 +1,14 @@
+FROM --platform=linux/amd64 ubuntu:20.04 as builder
+
+RUN apt-get update
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential xxd
+
+COPY . /repo
+WORKDIR /repo
+ENV PREFIX=/install
+RUN make -j8 hexify
+RUN make -j8 build
+RUN make install
+
+FROM ubuntu:20.04 as package
+COPY --from=builder /install /install
